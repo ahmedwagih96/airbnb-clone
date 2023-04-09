@@ -1,6 +1,6 @@
 "use client";
 import { AiOutlineMenu } from "react-icons/ai";
-import Avatar from "./Avatar";
+import Avatar from "../Avatar";
 import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
 
@@ -9,7 +9,6 @@ function UserMenu() {
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
-  console.log(isOpen)
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
@@ -21,7 +20,7 @@ function UserMenu() {
         </div>
         <div
           onClick={() => {
-            toggleOpen()
+            toggleOpen();
           }}
           className="p-4 md:py-1 md:px-2 border-[1px] border-neutral-100 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition"
         >
